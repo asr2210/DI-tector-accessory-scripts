@@ -17,4 +17,4 @@ Once finished, DI-tector will produce an output directory (the name of which is 
 
 **dvganalysis_sample.R** is an R script which creates plots from the data in **countsdata.txt**. All labels are specific to the Ebola project, so **dvganalysis_sample.R** should only be used as a guide or template, not as-written.
 
-DI-tector only takes in single reads, not paired-end reads. If analyzing paired-end data, one can either run each read file of a pair individually and use the two as replicates, or merge the reads using **mergereads.sh**. 
+DI-tector only takes in single reads, not paired-end reads. If analyzing paired-end data, one can either run each read file of a pair individually and use the two as replicates, or merge the reads using **merge_reads.sh**. The latter requires downloading BBMerge. 
