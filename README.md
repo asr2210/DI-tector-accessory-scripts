@@ -7,3 +7,9 @@ I ran DI-tector in Terminal, using the command below. Detailed explanations of t
 python DI-tector_06.py -p 1  -x 8 -o [OUTPUT DIR TAG] -t [OUTPUT FILE TAG] -g [FILE PATH FOR HOST GENOME REFERENCE] [FILE PATH FOR VIRAL GENOME REFERENCE] [FASTQ FILE (INPUT)]
 ```
 To run multiple fastqs at once, I collected the individual commands for each fastq into a larger bash script and ran them together.
+
+The session will inevitably crash while running DI-tector; the runtime for any given input file is usually ~30mins. To avoid this, run all commands in a Screen window [(details here)](https://linuxize.com/post/how-to-use-linux-screen/).
+
+Once finished, DI-tector will produce an output directory (the name of which is controlled in the parameters) which contains several text files. From the original paper, “*_summary.txt” recapitulates initial command line parameters and the total number of reads mapping a junction of each type of DI genomes. “*_counts.txt” lists all DI genomes with their respective counts and percentage, type, length, BP, and RI sites. Information concerning the length of the insert/deletion or loops is also mentioned. “*_output_sorted.txt” lists all reads overlapping a junction. For each read, DI genome length, BP, RI, delta position between BP and RI, segmentation of the read, MAPQ, RNAME, CIGAR, MD, POS (for both segments), QNAME values are mentioned. The sequence of the read is printed in upper-case letter before the junction and lower-case letter after. The sequence of each DI genome can be generated and exported as a multifasta file “*_fasta.fa”. Intermediate fastq and sam format files are also generated for potential further manual analyses. “*_Error.txt” and “*_Ali.txt” contain, respectively, error messages and a list of putatively correctly aligned segments that passed previous filters, mostly due to too many mismatches during alignment against the viral genome."
+
+
