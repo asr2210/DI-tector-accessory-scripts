@@ -1,5 +1,5 @@
 # DI-tector-accessory-scripts
 
-'''
+```
 python DI-tector_06.py -p 1  -x 8 -o [OUTPUT DIR TAG] -t [OUTPUT FILE TAG] -g [FILE PATH FOR HOST GENOME REFERENCE] [FILE PATH FOR VIRAL GENOME REFERENCE] [FASTQ FILE (INPUT)]
-'''
+```
